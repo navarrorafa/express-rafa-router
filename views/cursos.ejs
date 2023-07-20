@@ -1,0 +1,21 @@
+<%- include('templates/header.ejs', {
+    title: "JFL - Cursos",
+    description:"Saiba mais sobre os nossos cursos "
+}) %>
+
+<main>
+
+<section class="sectionCurso">
+    <% figureCursos.forEach(item => { %>
+      <figure>
+        <div class="imgCurso"><img src="<%= item.url %>" alt=""></div>
+        <h3><%= item.cursos %></h3>
+        <p><%= item.descripcion %></p>
+      </figure>
+    <% }) %>
+</section>
+
+
+</main>
+
+<%- include('templates/footer.ejs') %>

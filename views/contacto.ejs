@@ -1,0 +1,63 @@
+<%- include('templates/header.ejs', {
+    title: "JFL - Contacto",
+    description:"Contacto para mais informaciones sobre cursos y dudas"
+}) %>
+
+<main>
+<section class="pagContacto">
+
+    <div class="forme">
+        <form action="enviar.php" method="get">
+            <fieldset>
+                <legend>Entre en Contacto </legend>
+                <label for="name">
+                    <p>Nombre:</p>
+                </label>
+                <input type="name" placeholder="Nombre Apellido" name="name" class="name" required>
+                <label for="email">
+                    <p>Email:</p>
+                </label>
+                <input type="email" placeholder="example@fashion.com" name="email" class="email" required>
+                <label for="telefono">
+                    <p>Telefono:</p>
+                </label>
+                <input type="number" placeholder="+XX XXXXXX" name="telefono" class="telefono" required>
+                <textarea classe="message" name="message" rows="10"
+                    placeholder="Escriba su mensaje aquí"></textarea>
+                <button  type="submit" class="buttonContacto">Enviar</button>
+                <button class="buttonContacto" type="reset">Reset</button>
+            </fieldset>
+        </form>
+    </div>
+</section>
+
+
+<section class="pagContacto2">
+    <div class="cajaContacto">
+        
+            <div class="imgContacto correo"><img src="dfg"
+                    alt="foto de una carta">
+            </div><a href="mailto:contacto@fashion.com">contatcto@jflcursos.com
+        </a>
+    </div>
+    <div class="cajaContacto">
+       
+            <div class="imgContacto tel"><img src="dfd"
+                    alt="Imagem de una telefono">
+            </div>  <a href="tel:+34666666666">+34666 66 66 66
+        </a>
+    </div>
+
+</section>
+
+
+<section class="pagMapa">
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28060.99318022193!2d-52.81692025!3d-28.46074435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94fd493c92d28c8f%3A0x6ff21ca741cec0c8!2sN%C3%A3o-Me-Toque%2C%20RS%2C%2099470-000%2C%20Brasil!5e0!3m2!1spt-BR!2ses!4v1668549642325!5m2!1spt-BR!2ses"
+        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
+</main>
+
+
+<%- include('templates/footer.ejs') %>

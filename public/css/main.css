@@ -1,0 +1,404 @@
+:root {
+  --colorFundo1--: #22172B;
+  --colorFundo2--: #a72f28;
+  --colorLetra--: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+}
+
+
+
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.displayGrid {
+  display: grid;
+  grid-template-rows: 0.1fr 1fr 0.1;
+}
+
+section {
+  padding: 20px;
+}
+
+
+main {
+  grid-row: 2/3;
+}
+
+footer {
+  grid-row: 3/4;
+}
+
+
+
+/* ----------------------------------  HEADER------------------------------ */
+
+header {
+  grid-row: 1/2;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  background-color: var(--colorFundo1--);
+  color: var(--colorLetra--);
+  padding: 20px;
+ }
+
+ nav ul, nav a {
+  list-style: none;
+  color: var(--colorFundo2--);
+  text-shadow: 0.1px 0.1px 0px #FFF;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  text-align: center;
+
+
+ }
+
+
+
+
+/* ----------------------------- INDEX -------------------------------- */
+
+.estudeIndex {
+  background-color: var(--colorFundo2--);
+  color: var(--colorLetra--);
+}
+
+.indexVideo {
+  background-color: var(--colorFundo1--);
+  color: var(--colorLetra--);
+}
+
+.indexVideo iframe {
+  width: 100%;
+  height: 300px;
+}
+
+.indexEscola {
+  background-color: var(--colorFundo2--);
+  color: var(--colorLetra--);
+}
+
+.reviewIndex {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--colorFundo1--);
+  color: var(--colorLetra--);
+}
+
+.reviewAlunos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 10px 0px;
+
+}
+
+
+
+
+
+
+
+.imgAlumnos {
+  width: 30%;
+  /* height: 20px; */
+}
+
+
+
+/* ----------------------------- FOOTER -------------------------------- */
+
+footer {
+  background-color: var(--colorFundo1--);
+  color: var(--colorLetra--);
+  text-align: center;
+  padding: 20px;
+  font-weight: bold;
+}
+
+
+
+@media screen and (min-width:768px) {}
+
+/*768*/
+
+
+@media screen and (min-width:992px) {}
+
+/*992*/
+
+
+@media screen and (min-width: 1200px) {}
+
+/*1200*/
+
+
+
+/* ---------------------------- CURSOS ------------------------------- */
+.sectionCurso {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  background-color: var(--colorFundo2--);
+}
+
+.sectionCurso figure {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--colorLetra--);
+  width: calc(100%); 
+}
+.sectionCurso .imgCurso {
+  width: calc(48%);
+  background-color: aqua;
+  padding: 50px;
+}
+.imgText{
+  width: calc(48%);
+}
+
+
+
+
+
+
+
+@media screen and (min-width:768px) {}
+
+/*768*/
+
+
+@media screen and (min-width:992px) {}
+
+/*992*/
+
+
+@media screen and (min-width: 1200px) {}
+
+/*1200*/
+
+
+/* ----------------------------- INSTALACIONES -------------------*/
+
+.pagInstalaciones {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: var(--colorFundo2--);
+  color: var(--colorLetra--);
+}
+
+.pagInstalaciones figure {
+  width: 100%;
+  margin: 20px 0%;
+  font-size: 1.3rem;
+}
+
+.pagInstalaciones .imgInst {
+  width: 100%;
+  padding: 100px 100px;
+  background-color: black;
+} 
+
+
+@media screen and (min-width:768px) {}
+
+/*768*/
+
+
+@media screen and (min-width:992px) {}
+
+/*992*/
+
+
+@media screen and (min-width: 1200px) {}
+
+/*1200*/
+
+
+/* -------------------------- PROFESSORES -------------------- */
+  .pagProf {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: space-around;
+    gap: 10px;
+    text-align: center;
+    background-color: var(--colorFundo2--);
+  }
+
+  .pagProf figure{
+    margin: 20px 0;
+    background-color: var(--colorLetra--);
+    width: 60%;
+   
+
+  }
+
+  .imgProf {
+    background-color: black;
+    padding: 100px 80px;
+    width: 80%;
+    margin: 10px auto;
+  }
+
+@media screen and (min-width:768px) {}
+
+/*768*/
+
+
+@media screen and (min-width:992px) {}
+
+/*992*/
+
+
+@media screen and (min-width: 1200px) {}
+
+/*1200*/
+
+
+/* ------------------------ CONTACTO ------------------------ */
+
+
+.pagContacto {
+  background-color: var(--colorFundo2--);
+  color: var(--colorLetra--);
+}
+.pagContacto p {
+  font-size: 1.5rem; 
+}
+
+
+.pagContacto fieldset {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 80%;
+ margin: 20% auto 10% auto;
+ border: none;
+ 
+}
+.pagContacto legend {
+  text-align: center;
+  font-weight: bolder;
+  font-size: 3rem;
+  margin-bottom: 10%;
+}
+.pagContacto form{
+  margin: auto;
+
+}
+
+.pagContacto form input {
+  height: 5vh;
+}
+
+
+.pagContacto form input , form textarea  {
+  width: 100%;
+  margin-bottom: 3%; 
+  
+}
+.pagContacto form textarea {
+  margin-top : 3%;
+}
+
+.pagContacto .buttonContacto {
+  margin: 2% 2% 0 0 ;
+  padding: 1vh 2vh;
+}
+
+.pagContacto2{
+  background-color: var(--colorFundo1--);
+}
+
+
+.cajaContacto {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 80%;
+  margin-left: 10%;
+
+}
+
+.cajaContacto a {
+  text-decoration: none;
+  color: var(--colorLetra--);
+  font-weight: bolder;
+  font-size:1.2rem ;
+  
+}
+
+.pagMapa {
+  background-color: var(--colorFundo2--);
+}
+
+.mapa {
+  width: 80%;
+  margin: 30% auto 30% auto;
+}
+
+
+
+
+@media screen and (min-width:768px) {
+
+}/*768*/
+
+@media screen and (min-width:992px) {
+
+}/*992*/
+fieldset{
+  width: 70%;
+}
+
+@media screen and (min-width:1200px) {
+
+  fieldset{
+      width: 60%;
+  }
+
+}/*1200*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width:768px) {}
+
+/*768*/
+
+
+@media screen and (min-width:992px) {}
+
+/*992*/
+
+
+@media screen and (min-width: 1200px) {}
+
+/*1200*/

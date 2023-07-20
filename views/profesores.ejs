@@ -1,0 +1,23 @@
+<%- include('templates/header.ejs', {
+    title: "JFL - Profesores",
+    description:"JFL los mejores profesores y especialista para tu formacion "
+}) %>
+
+<main>
+
+<section class="pagProf">
+  <h1>Profesores</h1>
+  <% figureProf.forEach(item => { %>
+   <figure>
+    <div class="imgProf"><img src="<%= item.url %>" alt="<%= item.alt %>"></div>
+    <h2><%= item.nombre %></h2>
+    <p><%= item.prof %></p>
+   </figure>
+  <% }) %>
+
+</section>
+
+
+</main>
+
+<%- include('templates/footer.ejs') %>

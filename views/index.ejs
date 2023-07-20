@@ -1,0 +1,54 @@
+<%- include('templates/header.ejs', {
+    title: "WELCOME - JFL  ",
+    description:"JFL cursos donde realize seu suenos y blablabla "
+}) %>
+
+<main>
+
+
+    <section class="estudeIndex">
+     
+        <h1>Empieze tu cambio de vida!!</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit omnis dicta, laborum
+            voluptatibus atque sed ex odio tempora aliquam earum laudantium tenetur inventore nam autem
+            vitae possimus dolorum veritatis illum?</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore odio deserunt quibusdam aut
+            nisi commodi quia! Expedita earum, natus nulla illo sunt atque vitae ipsam sapiente eaque?
+            Dolorem, facilis eveniet!</p>
+   
+</section>
+
+<section class="indexVideo">
+    <div class="videoIndex">
+        <h2>Realize tu sueños</h2>
+        <iframe  src="https://www.youtube.com/embed/kWrdaLAzMHo"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+    </div>
+</section>
+
+
+
+<section class="indexEscola">
+    <h2>¿Porque JFL cursos?</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe aliquid placeat assumenda esse, perspiciatis quod dignissimos natus repudiandae culpa velit sunt officia deleniti sed molestiae dolorem non amet sint veritatis!
+    Suscipit aut quod cupiditate odio unde. Blanditiis, aliquid optio, delectus aut inventore provident voluptate obcaecati nihil possimus, veniam molestias maiores perferendis sit. Fuga sapiente ex eaque laboriosam eveniet soluta dicta?</p>
+</section>
+
+<section class="reviweIndex">
+
+   <h2>Depoimentos de Ex-Alumnos</h2>
+    <% review.forEach(item => { %>
+     <div class="imgAlumnos"><img src="<%= item.url %>" alt="<%= item.alt %>"></div>
+     <div class="textAlumnos">
+        <p><%= item.lorem %></p>
+     </div>
+    <% }) %>
+
+</section>
+
+
+</main>
+
+<%- include('templates/footer.ejs') %>
