@@ -36,14 +36,17 @@
     Suscipit aut quod cupiditate odio unde. Blanditiis, aliquid optio, delectus aut inventore provident voluptate obcaecati nihil possimus, veniam molestias maiores perferendis sit. Fuga sapiente ex eaque laboriosam eveniet soluta dicta?</p>
 </section>
 
-<section class="reviweIndex">
+<section class="reviewIndex">
 
    <h2>Depoimentos de Ex-Alumnos</h2>
+
     <% review.forEach(item => { %>
+     <div class="reviewAlunos">   
      <div class="imgAlumnos"><img src="<%= item.url %>" alt="<%= item.alt %>"></div>
      <div class="textAlumnos">
         <p><%= item.lorem %></p>
      </div>
+    </div>
     <% }) %>
 
 </section>

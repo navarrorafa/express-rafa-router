@@ -9,8 +9,10 @@
     <% figureCursos.forEach(item => { %>
       <figure>
         <div class="imgCurso"><img src="<%= item.url %>" alt=""></div>
+        <div class="imgText">
         <h3><%= item.cursos %></h3>
         <p><%= item.descripcion %></p>
+      </div>
       </figure>
     <% }) %>
 </section>

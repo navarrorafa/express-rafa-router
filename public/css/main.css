@@ -1,6 +1,6 @@
 :root {
   --colorFundo1--: #22172B;
-  --colorFundo2--: #a72f28;
+  --colorFundo2--: #be4f3b;
   --colorLetra--: #fff;
 }
 
@@ -13,9 +13,6 @@
 img {
   width: 100%;
 }
-
-
-
 
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -54,14 +51,19 @@ header {
   padding: 20px;
  }
 
+ /* header h2 {
+  width: 20%;
+ } */
  nav ul, nav a {
   list-style: none;
-  color: var(--colorFundo2--);
+  color: var(--colorLetra--);
   text-shadow: 0.1px 0.1px 0px #FFF;
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: bolder;
   text-align: center;
+  padding-right: 10px;
+  
 
 
  }
@@ -98,6 +100,11 @@ header {
   color: var(--colorLetra--);
 }
 
+.reviewIndex h2 {
+  margin:30px 0 ;
+  text-align: center;
+}
+
 .reviewAlunos {
   display: flex;
   flex-wrap: wrap;
@@ -112,8 +119,9 @@ header {
 
 
 
-.imgAlumnos {
-  width: 30%;
+.imgAlumnos img {
+  width: 80%;
+  border-radius: 80%;
   /* height: 20px; */
 }
 
@@ -131,9 +139,35 @@ footer {
 
 
 
-@media screen and (min-width:768px) {}
+@media screen and (min-width:768px) {
+header nav ul {
+  display: flex;
+  
+}
 
-/*768*/
+header {
+  flex-direction: row;
+  justify-content: space-between;
+}
+  .reviewIndex {
+  justify-content: center;
+}
+  .reviewAlunos{
+  justify-content: center;
+}
+
+  .imgAlumnos {
+  width: 20%;
+  height: 200px;
+  margin-bottom: 10px;
+}
+.textAlumnos {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  width: 40%;
+}
+}/*768*/
 
 
 @media screen and (min-width:992px) {}
@@ -167,7 +201,8 @@ footer {
   padding: 50px;
 }
 .imgText{
-  width: calc(48%);
+  width: calc(50%);
+  font-size: 1.2rem;
 }
 
 
@@ -176,12 +211,26 @@ footer {
 
 
 
-@media screen and (min-width:768px) {}
+@media screen and (min-width:768px) {
+.imgCurso{
+  height: 300px;
+}
+.imgText {
+  font-size: 1.5rem;
+  text-align: center;
+}
 
-/*768*/
+}/*768*/
 
 
-@media screen and (min-width:992px) {}
+@media screen and (min-width:992px) {
+  .sectionCurso figure {
+    width: 48%;
+  }
+  .imgCurso {
+    height: 100%;
+  }
+}
 
 /*992*/
 
@@ -209,7 +258,7 @@ footer {
 
 .pagInstalaciones .imgInst {
   width: 100%;
-  padding: 100px 100px;
+  padding: 150px 100px;
   background-color: black;
 } 
 
@@ -219,12 +268,21 @@ footer {
 /*768*/
 
 
-@media screen and (min-width:992px) {}
+@media screen and (min-width:992px) {
+  .pagInstalaciones figure{
+    width: 48%;
+    font-size: 2rem;
+  }
+}
 
 /*992*/
 
 
-@media screen and (min-width: 1200px) {}
+@media screen and (min-width: 1200px) {
+  .pagInstalaciones figure{
+    width: 33%;
+  }
+}
 
 /*1200*/
 
@@ -255,12 +313,28 @@ footer {
     margin: 10px auto;
   }
 
-@media screen and (min-width:768px) {}
+@media screen and (min-width:768px) {
+  .pagProf h1 {
+    width: 100%;
+  }
+  .pagProf {
+    flex-direction: row;
+    justify-content: space-evenly;
+
+   }
+  .pagProf figure{
+    width: 40%;
+  }
+}
 
 /*768*/
 
 
-@media screen and (min-width:992px) {}
+@media screen and (min-width:992px) {
+  .pagProf figure{
+    width: 30%;
+  }
+}
 
 /*992*/
 

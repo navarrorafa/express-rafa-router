@@ -14,7 +14,7 @@ const getReviewAlumnos = (req,res) => {
         },
         {
             id: 3,
-            url: "assets/m2.jpg",
+            url: "assets/m3.jpg",
             alt: "",
             lorem: '"Lorem ipsum dolor sit amet consectetur adipisicing elit."Navarro,Pepe - Granada'
         }
