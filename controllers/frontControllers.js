@@ -98,14 +98,10 @@ const getProf = (req,res) => {
         {nombre:"Belem Estaban" , prof:"Piel & cuerpo",url:"",alt:""},
         {nombre:"Ana Rosa" , prof:"Etiquetas",url:"",alt:""},
         {nombre:"Isabel Pantoj" , prof:"Tecnicas Vocales",url:"",alt:""},
-        {nombre:"ELton Pakas" , prof:"Pratica Elaborales",url:"",alt:""},
+        {nombre:"ELton D´Santos" , prof:"Pratica Elaborales",url:"",alt:""},
        ] 
     })
 }
-
-
-
-
 
 
 
