@@ -1,6 +1,6 @@
 const Profesores = require('../models/JflProfModels')
 const Cursos= require('../models/JflCursoModels')
-const Instalation = require('../models/JflInstalacionesModels')
+const Instalations = require('../models/JflInstalacionesModels')
 const getReviewAlumnos = (req,res) => {
   res.render('index',{
     review: [
@@ -28,25 +28,25 @@ const getReviewAlumnos = (req,res) => {
 
 
 
-const getInstal = (req,res) => {
-    res.render('instalaciones', {
-        figureInsta : [
-            {id:1,url:"",nombre:"Sala de Aula" },
-            {id:2,url:"",nombre:"Biblioteca" },
-            {id:3,url:"",nombre:"Cafeteria" },
-            {id:4,url:"",nombre:"Laboratorio Audio" },
-            {id:5,url:"",nombre:"Recepcao" },
-            {id:6,url:"",nombre:"Laboratorio de Video" },
-            {id:7,url:"",nombre:"Sala de Pratica" },
-            {id:8,url:"",nombre:"Sala Clinica" },
-            {id:9,url:"",nombre:"Terraza" },
-            {id:10,url:"",nombre:"Sala de Juegos" },
-            {id:11,url:"",nombre:"Patio" },
-            {id:12,url:"",nombre:"Lobby" },
+// const getInstal = (req,res) => {
+//     res.render('instalaciones', {
+//         figureInsta : [
+//             {id:1,url:"",nombre:"Sala de Aula" },
+//             {id:2,url:"",nombre:"Biblioteca" },
+//             {id:3,url:"",nombre:"Cafeteria" },
+//             {id:4,url:"",nombre:"Laboratorio Audio" },
+//             {id:5,url:"",nombre:"Recepcao" },
+//             {id:6,url:"",nombre:"Laboratorio de Video" },
+//             {id:7,url:"",nombre:"Sala de Pratica" },
+//             {id:8,url:"",nombre:"Sala Clinica" },
+//             {id:9,url:"",nombre:"Terraza" },
+//             {id:10,url:"",nombre:"Sala de Juegos" },
+//             {id:11,url:"",nombre:"Patio" },
+//             {id:12,url:"",nombre:"Lobby" },
 
-        ]
-    })
-}
+//         ]
+//     })
+// }
 
 // const getCursos = (req,res) => {
 //     res.render('cursos', {
@@ -109,6 +109,18 @@ const getInstal = (req,res) => {
 //        ] 
 //     })
 // }
+
+const getInstal = async (req,res) => {
+   try {
+      const instalations = await Instalations.find()
+
+      res.render('instalaciones', {
+        instalations
+      });
+   } catch (error) {
+    
+   }
+}
 
 const getCursos = async (req,res)=> {
     try {
