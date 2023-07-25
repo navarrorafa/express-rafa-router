@@ -1,3 +1,6 @@
+const Profesores = require('../models/JflProfModels')
+const Curso= require('../models/JflCursoModels')
+const Instalation = require('../models/JflInstalacionesModels')
 const getReviewAlumnos = (req,res) => {
   res.render('index',{
     review: [
@@ -22,6 +25,8 @@ const getReviewAlumnos = (req,res) => {
 
   })
 }
+
+
 
 const getInstal = (req,res) => {
     res.render('instalaciones', {
@@ -86,21 +91,34 @@ const getCursos = (req,res) => {
     })
 }
 
-const getProf = (req,res) => {
-    res.render('profesores', {
-       figureProf : [
-        {nombre:"Txema Vagones" , prof:"Java",url:"",alt:""},
-        {nombre:"Carlos S. Talk" , prof:"Oratoria",url:"",alt:""},
-        {nombre:"Gabirel CallBack" , prof:"Funciones CallBack",url:"",alt:""},
-        {nombre:"Trujillo Readme" , prof:"Documentacion",url:"",alt:""},
-        {nombre:"Sergio Bondacio" , prof:"Design Pelos",url:"",alt:""},
-        {nombre:"Hector Captain " , prof:"FullStack",url:"",alt:""},
-        {nombre:"Belem Estaban" , prof:"Piel & cuerpo",url:"",alt:""},
-        {nombre:"Ana Rosa" , prof:"Etiquetas",url:"",alt:""},
-        {nombre:"Isabel Pantoj" , prof:"Tecnicas Vocales",url:"",alt:""},
-        {nombre:"ELton D´Santos" , prof:"Pratica Elaborales",url:"",alt:""},
-       ] 
-    })
+// const getProf = (req,res) => {
+//     res.render('profesores', {
+//        figureProf : [
+//         {nombre:"Txema Vagones" , prof:"Java",url:"",alt:""},
+//         {nombre:"Carlos S. Talk" , prof:"Oratoria",url:"",alt:""},
+//         {nombre:"Gabirel CallBack" , prof:"Funciones CallBack",url:"",alt:""},
+//         {nombre:"Trujillo Readme" , prof:"Documentacion",url:"",alt:""},
+//         {nombre:"Sergio Bondacio" , prof:"Design Pelos",url:"",alt:""},
+//         {nombre:"Hector Captain " , prof:"FullStack",url:"",alt:""},
+//         {nombre:"Belem Estaban" , prof:"Piel & cuerpo",url:"",alt:""},
+//         {nombre:"Ana Rosa" , prof:"Etiquetas",url:"",alt:""},
+//         {nombre:"Isabel Pantoj" , prof:"Tecnicas Vocales",url:"",alt:""},
+//         {nombre:"ELton D´Santos" , prof:"Pratica Elaborales",url:"",alt:""},
+//        ] 
+//     })
+// }
+
+const getProf = async (req,res) => {
+    try {
+        const profesores = await Profesores.find();
+        console.log(profesores)
+
+        res.render('profesores', {
+            profesores:profesores
+        })
+    } catch (error) {
+        
+    }
 }
 
 
