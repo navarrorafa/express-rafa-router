@@ -1,32 +1,33 @@
 const Profesores = require('../models/JflProfModels')
 const Cursos= require('../models/JflCursoModels')
 const Instalations = require('../models/JflInstalacionesModels')
-const getReviewAlumnos = (req,res) => {
-  res.render('index',{
-    review: [
-        {
-            id: 1,
-            url: "assets/m1.jpg",
-            lorem: '"Lorem, ipsum dolor sit amet consectetur adipisicing elit." - Silva, Txema - Valencia'
-        },
-        {
-            id: 2,
-            url: "assets/m2.jpg",
-            alt: "",
-            lorem: '"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde alias labore fugit."Fuente, Maria - Madrid'
-        },
-        {
-            id: 3,
-            url: "assets/m3.jpg",
-            alt: "",
-            lorem: '"Lorem ipsum dolor sit amet consectetur adipisicing elit."Navarro,Pepe - Granada'
-        }
-    ]
-
-  })
-}
+const Reviews = require('../models/JflReviewModels')
 
 
+// const getReviewAlumnos = (req,res) => {
+//   res.render('index',{
+//     review: [
+//         {
+//             id: 1,
+//             url: "assets/m1.jpg",
+//             lorem: '"Lorem, ipsum dolor sit amet consectetur adipisicing elit." - Silva, Txema - Valencia'
+//         },
+//         {
+//             id: 2,
+//             url: "assets/m2.jpg",
+//             alt: "",
+//             lorem: '"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde alias labore fugit."Fuente, Maria - Madrid'
+//         },
+//         {
+//             id: 3,
+//             url: "assets/m3.jpg",
+//             alt: "",
+//             lorem: '"Lorem ipsum dolor sit amet consectetur adipisicing elit."Navarro,Pepe - Granada'
+//         }
+//     ]
+
+//   })
+// }
 
 // const getInstal = (req,res) => {
 //     res.render('instalaciones', {
@@ -109,6 +110,18 @@ const getReviewAlumnos = (req,res) => {
 //        ] 
 //     })
 // }
+
+const getReviewAlumnos = async (req,res) => {
+    try {
+        const reviews = await Reviews.find()
+
+        res.render('index',{
+            reviews
+        } )
+    } catch (error) {
+        
+    }
+}
 
 const getInstal = async (req,res) => {
    try {
