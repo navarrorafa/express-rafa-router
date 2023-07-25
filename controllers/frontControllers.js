@@ -1,5 +1,5 @@
 const Profesores = require('../models/JflProfModels')
-const Curso= require('../models/JflCursoModels')
+const Cursos= require('../models/JflCursoModels')
 const Instalation = require('../models/JflInstalacionesModels')
 const getReviewAlumnos = (req,res) => {
   res.render('index',{
@@ -48,48 +48,50 @@ const getInstal = (req,res) => {
     })
 }
 
-const getCursos = (req,res) => {
-    res.render('cursos', {
-        figureCursos : [
-            {
-                url:"",
-                alt:"",
-                cursos:"Dietética" ,
-                descripcion:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam laboriosam architecto placeatcorporis, totam quasi molestiae! Ea quis in fugit, dolorem ratione officia aperiam ullam natus"
-            },
-            {
-                url:"",
-                alt:"",
-                cursos:"Peluqueria" ,
-                descripcion:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ducimus ipsum accusamus qui atqueanimi quasi sequi asperiores expedita odio illum explicabo, fugiat veniam repudiandae recusandaeconsectetur, vel cupiditate. Blanditiis."
-            },
-            {
-                url:"",
-                alt:"",
-                cursos: "Desarrolo Web",
-                descripcion:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat dolores, quibusdam oditconsectetur est voluptas suscipit non pariatur molestiae perferendis, repellat itaque voluptatum eum repellendus incidunt ullam. Voluptatum, eligendi quo!"
-            },
-            {
-                url:"",
-                alt:"",
-                cursos:"Gestión Administrativa" ,
-                descripcion:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat dolores, quibusdam oditconsectetur est voluptas suscipit non pariatur molestiae perferendis, repellat itaque voluptatum eum repellendus incidunt ullam. Voluptatum, eligendi quo!"
-            },
-            {
-                url:"",
-                alt:"",
-                cursos:"Educación Infantil" ,
-                descripcion:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat dolores, quibusdam oditconsectetur est voluptas suscipit non pariatur molestiae perferendis, repellat itaque voluptatum eum repellendus incidunt ullam. Voluptatum, eligendi quo!"
-            },
-            {
-                url:"",
-                alt:"",
-                cursos:"Animaciones 3D" ,
-                descripcion:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat dolores, quibusdam oditconsectetur est voluptas suscipit non pariatur molestiae perferendis, repellat itaque voluptatum eum repellendus incidunt ullam. Voluptatum, eligendi quo!"
-            }
-        ]
-    })
-}
+// const getCursos = (req,res) => {
+//     res.render('cursos', {
+//         figureCursos : [
+//             {
+//                 url:"",
+//                 alt:"",
+//                 cursos:"Dietética" ,
+//                 descripcion:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam laboriosam architecto placeatcorporis, totam quasi molestiae! Ea quis in fugit, dolorem ratione officia aperiam ullam natus"
+//             },
+//             {
+//                 url:"",
+//                 alt:"",
+//                 cursos:"Peluqueria" ,
+//                 descripcion:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ducimus ipsum accusamus qui atqueanimi quasi sequi asperiores expedita odio illum explicabo, fugiat veniam repudiandae recusandaeconsectetur, vel cupiditate. Blanditiis."
+//             },
+//             {
+//                 url:"",
+//                 alt:"",
+//                 cursos: "Desarrolo Web",
+//                 descripcion:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat dolores, quibusdam oditconsectetur est voluptas suscipit non pariatur molestiae perferendis, repellat itaque voluptatum eum repellendus incidunt ullam. Voluptatum, eligendi quo!"
+//             },
+//             {
+//                 url:"",
+//                 alt:"",
+//                 cursos:"Gestión Administrativa" ,
+//                 descripcion:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat dolores, quibusdam oditconsectetur est voluptas suscipit non pariatur molestiae perferendis, repellat itaque voluptatum eum repellendus incidunt ullam. Voluptatum, eligendi quo!"
+//             },
+//             {
+//                 url:"",
+//                 alt:"",
+//                 cursos:"Educación Infantil" ,
+//                 descripcion:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat dolores, quibusdam oditconsectetur est voluptas suscipit non pariatur molestiae perferendis, repellat itaque voluptatum eum repellendus incidunt ullam. Voluptatum, eligendi quo!"
+//             },
+//             {
+//                 url:"",
+//                 alt:"",
+//                 cursos:"Animaciones 3D" ,
+//                 descripcion:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat dolores, quibusdam oditconsectetur est voluptas suscipit non pariatur molestiae perferendis, repellat itaque voluptatum eum repellendus incidunt ullam. Voluptatum, eligendi quo!"
+//             }
+//         ]
+//     })
+// }
+
+
 
 // const getProf = (req,res) => {
 //     res.render('profesores', {
@@ -107,6 +109,19 @@ const getCursos = (req,res) => {
 //        ] 
 //     })
 // }
+
+const getCursos = async (req,res)=> {
+    try {
+        const cursos = await Cursos.find();
+        console.log(cursos)
+
+        res.render('cursos', {
+            cursos:cursos
+        })
+    } catch (error) {
+        
+    }
+}
 
 const getProf = async (req,res) => {
     try {
